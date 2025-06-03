@@ -2,6 +2,7 @@ import express, { Application, Request, Response } from "express";
 import dotenv from "dotenv"
 import { logger } from "./middleware/logger";
 import { dot } from "node:test/reporters";
+import { bookRouter } from "./books/book.route";
 
 dotenv.config()
 
@@ -21,6 +22,8 @@ const PORT = process.env.PORT ||5000
 app.get('/' , (req:Request, res:Response) => {
 	res.send('Asap! Welcome 🙋‍♂️ to the Book 📚API with Drizzle ORM 🧠')
 });
+
+app.use('/api',bookRouter)
 
 //start server
 app.listen(PORT, () => {

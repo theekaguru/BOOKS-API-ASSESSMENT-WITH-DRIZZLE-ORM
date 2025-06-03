@@ -1,3 +1,46 @@
 //Default route
 ###
 GET http://localhost:5000/
+
+
+
+//get all books
+###
+GET http://localhost:5000/api/books
+
+
+//get book by Id
+###
+GET http://localhost:5000/api/books/1
+
+//create book
+###
+POST http://localhost:5000/api/books
+content-type: application/json
+
+{
+    "bookId": 1,
+    "bookTitle":"River & The Source",
+    "bookAuthor":"Margret A Agola",
+    "bookYear":"2007",
+    "bookGenre":"Community"
+}
+
+
+//Update book
+###
+PUT  http://localhost:5000/api/books/1
+content-type: application/json
+
+{
+    "bookId": 1,
+    "bookTitle":"when the sun goes down",
+    "bookAuthor":"Margret A Agola",
+    "bookYear":"2007",
+    "bookGenre":"Community"
+}
+
+//delete book
+### 
+DELETE http://localhost:5000/api/books/1
+  
