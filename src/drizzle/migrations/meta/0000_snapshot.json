@@ -1,0 +1,74 @@
+{
+  "id": "dbc8f2c1-62d9-430e-8584-75f5ca15bb41",
+  "prevId": "00000000-0000-0000-0000-000000000000",
+  "version": "7",
+  "dialect": "postgresql",
+  "tables": {
+    "public.bookTable": {
+      "name": "bookTable",
+      "schema": "",
+      "columns": {
+        "bookId": {
+          "name": "bookId",
+          "type": "serial",
+          "primaryKey": true,
+          "notNull": true
+        },
+        "bookTitle": {
+          "name": "bookTitle",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "bookAuthor": {
+          "name": "bookAuthor",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "bookYear": {
+          "name": "bookYear",
+          "type": "numeric",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "bookGenre": {
+          "name": "bookGenre",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "createdAt": {
+          "name": "createdAt",
+          "type": "timestamp",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "updatedAt": {
+          "name": "updatedAt",
+          "type": "timestamp",
+          "primaryKey": false,
+          "notNull": false
+        }
+      },
+      "indexes": {},
+      "foreignKeys": {},
+      "compositePrimaryKeys": {},
+      "uniqueConstraints": {},
+      "policies": {},
+      "checkConstraints": {},
+      "isRLSEnabled": false
+    }
+  },
+  "enums": {},
+  "schemas": {},
+  "sequences": {},
+  "roles": {},
+  "policies": {},
+  "views": {},
+  "_meta": {
+    "columns": {},
+    "schemas": {},
+    "tables": {}
+  }
+}
