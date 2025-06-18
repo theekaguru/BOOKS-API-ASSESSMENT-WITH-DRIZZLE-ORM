@@ -3,6 +3,8 @@ import dotenv from "dotenv"
 import { logger } from "./middleware/logger";
 import { dot } from "node:test/reporters";
 import { bookRouter } from "./books/book.route";
+import cors from "cors"
+
 
 dotenv.config()
 
@@ -10,6 +12,7 @@ const app:Application = express()
 
 
 //basic middleware
+app.use(cors())
 app.use(express.json());
 app.use(express.urlencoded({extended:true}));
 app.use(logger)
